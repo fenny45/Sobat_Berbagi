@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="#FFE6B3"
+    app:ignore="NamespaceTypo">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFC25D"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upload"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/sharing"
+            android:contentDescription="Logo" />
+    </LinearLayout>
+
+    <!-- ISI FORM -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="653dp"
+                android:layout_marginTop="100dp"
+                android:padding="20dp"
+                card_view:cardBackgroundColor="@color/light_orange"
+                card_view:cardCornerRadius="24dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- Nama Makanan -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Nama Makanan"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="25dp"
+                        card_view:cardBackgroundColor="@color/white"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="2dp">
+
+                        <EditText
+                            android:id="@+id/etNamaMakanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="12dp" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!-- Upload Gambar -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Upload Foto Makanan"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btnUploadMakanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="25dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:cardStrokeColor="#000000"
+                        app:cardStrokeWidth="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_marginEnd="8dp"
+                                android:contentDescription="Upload Icon"
+                                android:src="@drawable/upload" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload Makanan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/previewImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:visibility="gone" />
+
+
+                    <!-- Deskripsi -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Deskripsi"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="25dp"
+                        card_view:cardBackgroundColor="@color/white"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="2dp">
+
+                        <EditText
+                            android:id="@+id/etDeskripsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="12dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Lokasi -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Lokasi"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="25dp"
+                        card_view:cardBackgroundColor="@color/white"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="2dp">
+
+                        <EditText
+                            android:id="@+id/etLokasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="12dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Batas Waktu -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Batas Waktu"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="25dp"
+                        card_view:cardBackgroundColor="@color/white"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="2dp">
+
+                        <EditText
+                            android:id="@+id/etBatasWaktu"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="12dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Checkbox -->
+                    <CheckBox
+                        android:id="@+id/checkLayak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Saya memastikan makanan ini layak konsumsi"
+                        android:textColor="#000000" />
+
+                    <!-- Tombol Upload -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        card_view:cardBackgroundColor="#FFC25D"
+                        card_view:cardCornerRadius="24dp"
+                        card_view:cardElevation="4dp">
+
+                        <Button
+                            android:id="@+id/btnUpload"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="Upload"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <!-- Floating Upload Button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/navUpload"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        card_view:cardCornerRadius="32dp"
+        card_view:cardElevation="8dp"
+        card_view:cardBackgroundColor="#FFC25D">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/plus"
+            android:contentDescription="Upload" />
+    </androidx.cardview.widget.CardView>
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:weightSum="5"
+        android:elevation="6dp"
+        android:paddingTop="6dp">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:padding="12dp"
+            android:contentDescription="Beranda" />
+
+        <ImageView
+            android:id="@+id/navInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/megaphone"
+            android:padding="12dp"
+            android:contentDescription="Info" />
+
+        <!-- Space for Upload Button -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/navChat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/chat"
+            android:padding="12dp"
+            android:contentDescription="Chat" />
+
+        <ImageView
+            android:id="@+id/navAccount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/profile"
+            android:padding="12dp"
+            android:contentDescription="Profil" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="start"
+    android:orientation="horizontal">
+
+    <!-- Foto profil lawan bicara -->
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/profile"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Other" />
+
+    <!-- Bubble pesan -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:backgroundTint="@color/light_orange"
+        android:padding="12dp"
+        android:text="Halo, ini pesan dariku"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:maxWidth="240dp"
+        android:layout_marginEnd="8dp" />
+</LinearLayout>
